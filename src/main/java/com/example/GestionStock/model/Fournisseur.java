@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "fournisseur")
-public class Fournisseur {
+public class Fournisseur extends AbstractEntity{
 }

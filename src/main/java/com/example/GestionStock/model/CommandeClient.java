@@ -13,5 +13,5 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "commandeclient")
-public class CommandeClient {
+public class CommandeClient extends AbstractEntity{
 }
