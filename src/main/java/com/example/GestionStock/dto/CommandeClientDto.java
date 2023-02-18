@@ -11,15 +11,11 @@ import java.util.List;
 @Builder
 public class CommandeClientDto {
 
-
     private String code;
-
 
     private Instant dateCommande;
 
-
     private ClientDto client;
-
 
     private List<LigneCommandeClientDto> ligneCommandeClients;
 }
