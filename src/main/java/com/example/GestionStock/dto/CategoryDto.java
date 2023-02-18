@@ -32,4 +32,16 @@ public class CategoryDto {
                 .designation(category.getDesignation())
                 .build();
     }
+
+    public Category toEntity(CategoryDto categoryDto){
+        if(categoryDto == null){
+            return null;
+        }
+        return Category.builder()
+                .code(categoryDto.getCode())
+                .designation(categoryDto.getDesignation())
+                .build();
+    }
+
+
 }

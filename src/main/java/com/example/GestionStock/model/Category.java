@@ -9,6 +9,7 @@ import lombok.*;
 import org.hibernate.annotations.Comment;
 
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.util.List;
 
 
@@ -28,4 +29,8 @@ public class Category extends AbstractEntity{
 
     @OneToMany(mappedBy = "category")
     private List<Article> articles;
+
+    Category(Integer id, Instant creationDate, Instant lastModifiedDate) {
+        super(id, creationDate, lastModifiedDate);
+    }
 }
