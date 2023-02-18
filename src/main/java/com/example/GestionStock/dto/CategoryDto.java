@@ -1,6 +1,8 @@
 package com.example.GestionStock.dto;
 
 
+import com.example.GestionStock.model.Category;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 
@@ -16,5 +18,18 @@ public class CategoryDto {
 
     private String designation;
 
+    @JsonIgnore
     private List<ArticleDto> articles;
+
+    public CategoryDto fromEntity(Category category){
+        if(category == null) {
+            return null;
+        }
+
+        return CategoryDto.builder()
+                .id(category.getId())
+                .code(category.getCode())
+                .designation(category.getDesignation())
+                .build();
+    }
 }

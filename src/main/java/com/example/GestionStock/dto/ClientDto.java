@@ -1,6 +1,5 @@
 package com.example.GestionStock.dto;
 
-import com.example.GestionStock.model.Adresse;
 
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +17,7 @@ public class ClientDto {
 
     private String prenom;
 
-    private Adresse adresse;
+    private AdresseDto adresse;
 
     private String photo;
 
