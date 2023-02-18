@@ -11,7 +11,6 @@ import java.util.List;
 @Builder
 public class EntrepriseDto {
 
-
     private String nom;
 
     private String description;
