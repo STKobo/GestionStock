@@ -1,15 +1,13 @@
 package com.example.GestionStock.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.Instant;
 import java.util.List;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -44,5 +42,5 @@ public class Utilisateur extends AbstractEntity{
 
     @OneToMany(mappedBy = "utilisateur")
     private List<Roles> roles;
-    
+
 }
