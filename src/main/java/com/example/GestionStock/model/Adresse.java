@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Comment;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode
 @Embeddable
-public class Adresse {
+public class Adresse implements Serializable {
 
     @Column(name = "adresse1")
     private String adresse1;

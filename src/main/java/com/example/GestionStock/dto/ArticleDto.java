@@ -1,9 +1,6 @@
 package com.example.GestionStock.dto;
 
-import com.example.GestionStock.model.Category;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+
 import lombok.Builder;
 import lombok.Data;
 
