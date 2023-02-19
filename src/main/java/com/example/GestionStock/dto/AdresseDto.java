@@ -19,7 +19,7 @@ public class AdresseDto {
 
     private String pays;
 
-    public AdresseDto fromEntity(Adresse adresse){
+    public static AdresseDto fromEntity(Adresse adresse){
         if(adresse == null){
             return null;
         }
@@ -32,17 +32,17 @@ public class AdresseDto {
                 .build();
     }
 
-    public Adresse toEntity(AdresseDto adresseDto){
+    public static Adresse toEntity(AdresseDto adresseDto){
         if(adresseDto == null){
-            return null; 
+            return null;
         }
-        Adresse adresse = new Adresse();
-        adresse.setAdresse1(adresseDto.getAdresse1());
-        adresse.setAdresse2(adresseDto.getAdresse2());
-        adresse.setCodePostale(adresseDto.getCodePostale());
-        adresse.setVille(adresseDto.getVille());
-        adresse.setPays(adresseDto.getPays());
-        return adresse;
+        return Adresse.builder()
+                .adresse1(adresseDto.getAdresse1())
+                .adresse2(adresseDto.getAdresse2())
+                .codePostale(adresseDto.getCodePostale())
+                .ville(adresseDto.getVille())
+                .pays(adresseDto.getPays())
+                .build();
     }
 
 }
