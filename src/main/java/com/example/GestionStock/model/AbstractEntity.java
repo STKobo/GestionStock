@@ -20,6 +20,7 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 public class AbstractEntity implements Serializable {
 
+
     @Id
     @GeneratedValue
     private Integer id;

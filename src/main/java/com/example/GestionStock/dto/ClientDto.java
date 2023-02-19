@@ -1,6 +1,8 @@
 package com.example.GestionStock.dto;
 
 
+import com.example.GestionStock.model.Client;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 
@@ -25,5 +27,10 @@ public class ClientDto {
 
     private String numTel;
 
+    @JsonIgnore
     private List<CommandeClientDto> commandeClients;
+
+    public Client toEntity(ClientDto clientDto){
+        return Client.builder().build();
+    }
 }

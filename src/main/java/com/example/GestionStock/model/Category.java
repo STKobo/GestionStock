@@ -33,4 +33,6 @@ public class Category extends AbstractEntity{
     Category(Integer id, Instant creationDate, Instant lastModifiedDate) {
         super(id, creationDate, lastModifiedDate);
     }
+
+
 }
