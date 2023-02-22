@@ -30,7 +30,32 @@ public class ClientDto {
     @JsonIgnore
     private List<CommandeClientDto> commandeClients;
 
-    public Client toEntity(ClientDto clientDto){
-        return Client.builder().build();
+    public static ClientDto fromEntity(Client client{
+        if(client== null){
+            return null;
+        }
+        return ClientDto.builder()
+                .nom(client.getNom())
+                .prenom(client.getPrenom())
+                .adresse(client.getAdresse())
+                .photo(client.getPhoto())
+                .mail(client.getMail())
+                .numTel(client.getNumTel())
+                .commandeClients(client.getCommandeClients())
+                .build();
+    }
+    public static Client toEntity(ClientDto clientDto){
+        if(clientDto == null){
+            return null;
+        }
+        return Client.builder()
+                .nom(clientDto.getNom())
+                .prenom(clientDto.getPrenom())
+                .adresse(clientDto.getAdresse())
+                .photo(clientDto.getPhoto())
+                .mail(clientDto.getMail())
+                .numTel(clientDto.getNumTel())
+                .commandeClients(clientDto.getCommandeClients())
+                .build();
     }
 }
