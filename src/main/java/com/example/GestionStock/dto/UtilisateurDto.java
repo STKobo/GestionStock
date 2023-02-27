@@ -1,5 +1,7 @@
 package com.example.GestionStock.dto;
 
+import com.example.GestionStock.model.Adresse;
+import com.example.GestionStock.model.Utilisateur;
 import lombok.Builder;
 import lombok.Data;
 
@@ -29,4 +31,18 @@ public class UtilisateurDto {
     private EntrepriseDto entreprise;
 
     private List<RolesDto> roles;
+
+    public static UtilisateurDto fromEntity(Utilisateur utilisateur){
+        if(utilisateur == null){
+            return null;
+        }
+        return UtilisateurDto.builder()
+                .id(utilisateur.getId())
+                .nom(utilisateur.getNom())
+                .prenom(utilisateur.getPrenom())
+                .email(utilisateur.getEmail())
+                .motDePasse(utilisateur.getMotDePasse())
+                .dateDeNaissance(utilisateur.getDateDeNaissance())
+                .adresse(AdresseDto.fromEntity(utilisateur.getAdresse()))
+    }
 }
