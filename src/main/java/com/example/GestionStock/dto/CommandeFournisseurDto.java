@@ -1,5 +1,6 @@
 package com.example.GestionStock.dto;
 
+import com.example.GestionStock.model.CommandeFournisseur;
 import lombok.Builder;
 import lombok.Data;
 
@@ -19,4 +20,10 @@ public class CommandeFournisseurDto {
     private FournisseurDto fournisseur;
 
     private List<LigneCommandeFournisseurDto> ligneCommandeFournisseurs;
+
+    public static CommandeFournisseurDto fromEntity(CommandeFournisseur commandeFournisseur){
+        if(commandeFournisseur == null){
+
+        }
+    }
 }
